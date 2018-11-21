@@ -1,0 +1,35 @@
+---
+title: "RLohiya Discussion13"
+author: "Ritesh Lohiya"
+date: "November 20, 2018"
+output: html_document
+---
+
+#                             Discussion 13
+
+#           IS 605 FUNDAMENTALS OF COMPUTATIONAL MATHEMATICS
+
+#                             Calculus
+
+Using R, provide the solution for any exercise in either Chapter 4 or Chapter 7 of the calculus textbook.  If you are unsure of your solution, post your concerns.
+
+# Chapter 4.3 Exercise 4:
+
+```{r}
+library(Deriv)
+```
+
+Find the minimum sum of two numbers whose product is 500.
+
+limx -> 0  - f(x) = - $infinity$
+
+```{r}
+mav <- 100
+miv <- -mav
+
+fx <- function(x) {
+    x + 500/x
+}
+fxprime <- Deriv(fx)
+(out_root <- uniroot(fx, c(miv, mav)))
+```
